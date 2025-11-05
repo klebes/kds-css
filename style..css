@@ -308,6 +308,69 @@ font-size: 17px;
 line-height: 24px;
 margin: 10px 0;
 }
+
+/*****************************************
+Style do Container do Slider
+******************************************/
+.featured-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide-item {
+  display: none;
+  animation: fadeSlide 1s ease-in-out;
+}
+
+.slide-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.slide-item img:hover {
+  transform: scale(1.02);
+}
+
+.slide-item.main-post {
+  display: block;
+}
+
+.entry-title a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.entry-title a:hover {
+  color: #0078ff;
+}
+
+.meta {
+  font-size: 13px;
+  color: #777;
+}
+
+.category {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background: #0078ff;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /*****************************************
 Global Links CSS
 ******************************************/
