@@ -329,7 +329,7 @@ Style do Container do Slider
 
 /* Imagens principais e secundárias */
 .slide-item img {
-  width: 100%;
+  width: 50%;
   height: 360px; /* melhora nitidez e proporção */
   object-fit: cover; /* evita distorções */
   border-radius: 10px;
