@@ -314,8 +314,8 @@ Style do Container do Slider
 ******************************************/
 .featured-slider-container {
   position: relative;
-  width: 100%;
-  max-width: 1100px;
+  width: 50%;
+  max-width: 700px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
