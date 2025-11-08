@@ -321,7 +321,7 @@ Style do Container do Slider
 
 /* Slide principal */
 #featured-slider .main-post img {
-  width: 100%;
+  width: 10%;
   height: 420px; /* altura do principal */
   object-fit: cover; /* evita distorção */
   border-radius: 8px;
