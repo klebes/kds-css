@@ -312,99 +312,45 @@ margin: 10px 0;
 /*****************************************
 Style do Container do Slider
 ******************************************/
-.featured-slider-container {
+/* Estilo do Slider Principal */
+#featured-slider {
   position: relative;
-  width: 50%;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 100%;
   overflow: hidden;
-  border-radius: 10px;
 }
 
-/* Itens do slide */
-.slide-item {
-  display: none;
-  animation: fadeSlide 1s ease-in-out;
+/* Slide principal */
+#featured-slider .main-post img {
+  width: 100%;
+  height: 420px; /* altura do principal */
+  object-fit: cover; /* evita distorção */
+  border-radius: 8px;
+  transition: transform 0.4s ease;
 }
 
-/* Imagens principais e secundárias */
-.slide-item img {
-  width: 50%;
-  height: 360px; /* melhora nitidez e proporção */
-  object-fit: cover; /* evita distorções */
-  border-radius: 10px;
-  transition: transform 0.3s ease, filter 0.4s ease;
-  will-change: transform;
+/* Slides secundários */
+#featured-slider .secondary-post img {
+  width: 100%;
+  height: 240px; /* altura dos menores */
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-/* Efeito hover mais suave */
-.slide-item img:hover {
+/* Efeito hover */
+#featured-slider img:hover {
   transform: scale(1.03);
-  filter: brightness(1.05);
 }
 
-/* Slide principal visível inicialmente */
-.slide-item.main-post {
-  display: block;
-}
-
-/* Título */
-.entry-title a {
-  color: #222;
-  text-decoration: none;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.entry-title a:hover {
-  color: #0078ff;
-  text-decoration: underline;
-}
-
-/* Metadados */
-.meta {
-  font-size: 13px;
-  color: #777;
-  margin-top: 6px;
-}
-
-/* Categoria destacada */
-.category {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  background: #0078ff;
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
-/* Animação */
-@keyframes fadeSlide {
-  from { opacity: 0; transform: scale(1.02); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-/*****************************************
-Responsividade (Mobile)
-******************************************/
+/* Exibição responsiva para celular */
 @media screen and (max-width: 768px) {
-  .slide-item img {
-    height: 260px; /* reduz para celulares */
+  #featured-slider .main-post img {
+    height: 260px;
   }
-
-  .entry-title a {
-    font-size: 15px;
-  }
-
-  .category {
-    font-size: 11px;
-    padding: 3px 8px;
+  #featured-slider .secondary-post img {
+    height: 180px;
   }
 }
+
 
 
 /*****************************************
