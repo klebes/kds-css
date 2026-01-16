@@ -2481,6 +2481,12 @@ transition: all 0.2s linear;
 }
 
 /* slider principal */
+
+#featured-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .slider-wrapper {
   position: relative;
   width: 100%;
@@ -2488,6 +2494,17 @@ transition: all 0.2s linear;
   overflow: hidden;
 }
 
+.slider-inner {
+  position: relative;
+  width: 100%;
+}
+
+.slide-item {
+  display: none;
+  text-align: center;
+}
+
+/* Setas */
 .slider-prev,
 .slider-next {
   position: absolute;
@@ -2498,31 +2515,61 @@ transition: all 0.2s linear;
   border: none;
   padding: 12px 18px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 26px;
   border-radius: 50%;
   z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  background: rgba(0,0,0,0.8);
 }
 
 .slider-prev { left: 15px; }
 .slider-next { right: 15px; }
 
+/* Pontinhos */
 .slider-dots {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .slider-dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #bbb;
+  width: 12px;
+  height: 12px;
+  background: #ccc;
   border-radius: 50%;
-  margin: 0 5px;
+  margin: 0 6px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .slider-dot.active {
   background: #0078ff;
+}
+
+/* Categoria */
+.slide-item .category {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background: #0078ff;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  z-index: 5;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .slider-prev,
+  .slider-next {
+    padding: 8px 12px;
+    font-size: 20px;
+  }
 }
 
 -->
