@@ -2707,27 +2707,3 @@ transition: all 0.2s linear;
     font-size: 22px;
   }
 }
-
-/* ── FIX largura post individual no desktop ── */
-body.item-view .main-wrapper {
-  width: 100% !important;
-  max-width: 900px;
-  float: none !important;
-  margin: 0 auto !important;
-}
-
-body.item-view .sidebar-wrapper {
-  display: none !important;
-}
-
-/* Reduz padding do post-body no desktop
-   para não comprimir mais o conteúdo */
-body.item-view .post-body {
-  padding: 28px !important;
-}
-
-@media (max-width: 768px) {
-  body.item-view .post-body {
-    padding: 16px !important;
-  }
-}
