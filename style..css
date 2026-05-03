@@ -2707,3 +2707,15 @@ transition: all 0.2s linear;
     font-size: 22px;
   }
 }
+
+/* Apenas na página do post individual */
+body.item-view #main-wrapper {
+  width: 100%;
+  max-width: 960px;
+  float: none;
+  margin: 0 auto;
+}
+
+body.item-view #sidebar-wrapper {
+  display: none;
+}
