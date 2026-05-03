@@ -2707,14 +2707,3 @@ transition: all 0.2s linear;
     font-size: 22px;
   }
 }
-/* FIX — Post individual ocupa largura total */
-body.item-view .main-wrapper {
-  width: 100%;
-  max-width: 900px;
-  float: none;
-  margin: 0 auto;
-}
-
-body.item-view .sidebar-wrapper {
-  display: none;
-}
