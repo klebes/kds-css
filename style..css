@@ -3622,3 +3622,24 @@ body.kds-dark .kds-search-close:hover { background: #334155; color: #e2e8f0; }
 @media (max-width: 768px) {
   body { padding-bottom: 64px !important; }
 }
+
+/* FIX — post individual ocupa largura total */
+
+/* Na página de post, posts-grid tem apenas 1 item — força coluna única */
+.item-page .posts-grid,
+.item-page .post-outer {
+  grid-template-columns: 1fr !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Alternativa — pelo número de colunas automático */
+.posts-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
+}
+
+.post-outer {
+  width: 100% !important;
+  max-width: 100% !important;
+  grid-column: 1 / -1;   /* ocupa todas as colunas disponíveis */
+}
