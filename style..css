@@ -3629,28 +3629,39 @@ body.kds-dark .kds-search-close:hover { background: #334155; color: #e2e8f0; }
   body { padding-bottom: 64px !important; }
 }
 
-/* FIX — post individual ocupa largura total */
+/* FIX DEFINITIVO — largura do post individual */
 
-/* Na página de post, posts-grid tem apenas 1 item — força coluna única */
+/* Garante que o content section não limite a largura */
+#content.section {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Widget do Blogger que envolve os posts */
+.widget.Blog,
+#Blog1 {
+  width: 100%;
+  min-width: 0;
+}
+
+/* O posts-grid na página de post tem 1 coluna — força largura total */
 .item-page .posts-grid,
-.item-page .post-outer {
-  grid-template-columns: 1fr !important;
-  max-width: 100% !important;
+.archive-page .posts-grid {
+  display: block !important;
   width: 100% !important;
 }
 
-/* Alternativa — pelo número de colunas automático */
-.posts-grid {
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
-}
-
-.post-outer {
+/* post-outer e post-hentry ocupam 100% */
+.post-outer,
+.post-hentry {
   width: 100% !important;
   max-width: 100% !important;
-  grid-column: 1 / -1;   /* ocupa todas as colunas disponíveis */
+  min-width: 0;
 }
 
-@media (max-width: 900px) {
-  .outer-wrapper { flex-direction: column; }
-  .sidebar-wrapper { width: 100%; flex: unset; }
+/* Garante que o main-wrapper expande */
+.main-wrapper {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
 }
